@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".Gofood">
+    <LinearLayout
+        android:id="@+id/Atas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/LogoGofood"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:src="@drawable/menu_gofood"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order Food"
+            android:textSize="30dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/colorFont"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/Form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/Atas"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/txtNama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama"
+            android:textSize="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="15dp"/>
+
+        <EditText
+            android:id="@+id/editNama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/txtNama"
+            android:hint="Isi Nama"
+            android:textSize="20dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="20dp"
+            />
+
+        <TextView
+            android:id="@+id/txtAlamat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alamat"
+            android:textSize="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/txtNama"/>
+
+        <EditText
+            android:id="@+id/editAlamat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/txtAlamat"
+            android:layout_below="@id/editNama"
+            android:hint="Isi Alamat"
+            android:textSize="20dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="20dp"
+            />
+
+        <TextView
+            android:id="@+id/txtPesan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pesan"
+            android:textSize="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/txtAlamat"/>
+
+        <EditText
+            android:id="@+id/editPesan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/txtPesan"
+            android:layout_below="@id/editAlamat"
+            android:hint="Isi Pesanan"
+            android:textSize="20dp"
+            android:layout_marginLeft="33dp"
+            android:layout_marginRight="20dp"
+            />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/Order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="ORDER"
+        android:textSize="25dp"
+        android:textColor="#ffff"
+        app:layout_constraintTop_toBottomOf="@id/Form"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        android:layout_margin="15dp"
+        android:padding="15dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

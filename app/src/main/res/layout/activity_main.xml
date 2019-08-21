@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/logoGojek"
+        android:src="@drawable/gojek"
+        android:layout_marginTop="40dp"
+        app:layout_constraintBottom_toTopOf="@id/LayouForButton"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/LayouForButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logoGojek"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageButton
+                android:id="@+id/menu_gomart"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+
+                android:background="@drawable/menu_gomart" />
+
+            <ImageButton
+                android:id="@+id/menu_goride"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/menu_goride"
+                android:layout_toRightOf="@id/menu_gomart" />
+
+            <ImageButton
+                android:id="@+id/menu_gofood"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/menu_gofood"
+                android:layout_below="@id/menu_gomart" />
+
+            <ImageButton
+                android:id="@+id/menu_gosend"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/menu_gosend"
+                android:layout_toRightOf="@id/menu_gofood"
+                android:layout_below="@id/menu_goride"/>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
